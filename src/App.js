@@ -13,26 +13,29 @@ class App extends Component{
 
   constructor(){
     super();
-    this.state ={
-      notes: []
-    }
+
 
     this.app = firebase.initializeApp(db_config); //conection to firebase
     this.db = this.app.database().ref().child('notes'); //colection named notes
+
+
+    this.state ={
+        notes: []
+    }
+
+    
+
     this.addNote = this.addNote.bind(this);
     this.removeNote =this.removeNote.bind(this);
 
    
   }
 
+
+
   componentDidMount(){
 
-
-
     const notes = this.state.notes;
-
-
-
 
 
 
@@ -49,26 +52,42 @@ class App extends Component{
     })
 ;
 
-    this.db.on('child_removed', snap =>{
+
+
+    this.db.on('child_removed', snapshot =>{
 
       for(let i = 0; i< notes.length; i++){
 
-        if(notes[i].noteId = snap.key){
+        if(notes[i].noteId = snapshot.key){
 
          notes.splice(i,1);
-         
-         return notes
-        }
-
+ }
 
       }
-        this.setState({
-        notes: notes})
+           
+      this.setState({
+        notes: notes,
+      })
     });
 
   }
 
+
+  
+updateNote(noteId,note){
+
+this.db.child(noteId).update({noteContent: note});  
+
+
+}
+
+
+
+
   removeNote(noteId){
+
+
+
     this.db.child(noteId).remove();
     
   }
@@ -77,11 +96,12 @@ class App extends Component{
 
     this.db.push().set({noteContent: note})
     
-
   }
 
 
   render(){
+
+    
     return(
       <div className ="notesContainer">
         
@@ -103,24 +123,28 @@ class App extends Component{
         <div className= "notesBody">
         {
           this.state.notes.map(note =>{
+
             return(
+              
               <Note
               noteContent = {note.noteContent}
               noteId = {note.noteId}
               key = {note.noteId}
               removeNote= {this.removeNote}
+              updateNote ={this.updateNote}
               />
+  
             )
-
           })
-        }
+}
 
         </div>
 
 
         <div className= "notesFooter">
 
-        <NoteForm addNote= {this.addNote} />
+        <NoteForm addNote= {this.addNote} 
+        />
 
         </div>
 

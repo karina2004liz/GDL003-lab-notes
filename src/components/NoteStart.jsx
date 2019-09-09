@@ -13,7 +13,9 @@ class NoteStart extends Component{
         super();
 
         this.handleAuth = this.handleAuth.bind(this);
-        this.handleAuthFace = this.handleAuthFace.bind(this)
+        this.handleAuthFace = this.handleAuthFace.bind(this);
+        this.handleAuthEmailAndPass = this.handleAuthEmailAndPass.bind(this);
+        this.logOut = this.logOut.bind(this);
     }
 
     handleAuth(){
@@ -40,7 +42,22 @@ class NoteStart extends Component{
 
     handleAuthEmailAndPass(){
 
+        let email = this.textEmail.value;
+        let pass = this.textPass.value;
 
+        firebase.auth().createUserWithEmailAndPassword(email,pass)
+        .then(result=> console.log(`${result.user.email} ha iniciado sesión`))
+        .catch(error => console.log(`Error ${error.code}: ${error.message} ` ))
+
+
+    }
+
+
+    logOut(){
+
+        firebase.auth().signOut()
+        .then(result=> console.log("Se ha cerrado sesion"))
+        .catch(error => console.log(`Error ${error.code}: ${error.message} ` ))
 
     }
 
@@ -50,17 +67,22 @@ class NoteStart extends Component{
         return(
 
             <div className= "NotesStart">
-                <input type="text" placeholder="Type your email"/>
+                <form>
+                <input required ref= {input=>{this.textEmail = input;}} type="text" placeholder="Type your email"/>
                 <br/>
-                <input type="text" placeholder= "Type your password" />
+                <input required ref= {input=>{this.textPass = input;}} type="password" placeholder= "Type your password" />
                 <br/>
-                <input type="Button" value= "Sign In" />
+                <input onClick={this.handleAuthEmailAndPass} type="Button" value= "Sign In" />
                 <br/>
+
+                </form>
+
                 <h2>Login with</h2>
                 <input onClick={this.handleAuthFace} value= "Facebook" type="button"/>
                 <br/>
             
                 <input onClick={this.handleAuth} value = "Google" type="button"/>
+                <input onClick ={this.logOut} value = "LogOut" type= "button" ></input>
            </div>
 
         )

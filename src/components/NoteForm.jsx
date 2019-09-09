@@ -11,6 +11,11 @@ class NoteForm extends Component{
 
     } 
 
+    updateNote(){
+        this.props.updateNote(this.textInput.value);
+
+    }
+
     addNote(){
 
       this.props.addNote(this.textInput.value);
