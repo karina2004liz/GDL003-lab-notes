@@ -6,7 +6,11 @@ import NoteForm from './components/NoteForm';
 import NoteStart from './components/NoteStart';
 import firebase from 'firebase';
 import {db_config} from './database/config';
-import 'firebase/database' 
+import 'firebase/database' ;
+import 'firebase/auth';
+//import { FirebaseAuthProvider, FirebaseAuthConsumer } from "@react-firebase/auth";
+
+
 
 
 class App extends Component{
@@ -18,63 +22,59 @@ class App extends Component{
     this.app = firebase.initializeApp(db_config); //conection to firebase
     this.db = this.app.database().ref().child('notes'); //colection named notes
 
-
     this.state ={
         notes: []
     }
-
-    
-
-    this.addNote = this.addNote.bind(this);
-    this.removeNote =this.removeNote.bind(this);
-
-   
+ 
   }
 
 
 
-  componentDidMount(){
 
-    const notes = this.state.notes;
+  componentWillMount(){
 
-
+    const prevNotes = this.state.notes;
 
     this.db.on('child_added', snap =>{
 
-      notes.push({
+
+      prevNotes.push({
         noteId: snap.key,
         noteContent: snap.val().noteContent,
      })
 
      this.setState({
-       notes: notes
+       notes: prevNotes
      })
     })
 ;
 
 
 
-    this.db.on('child_removed', snapshot =>{
+    this.db.on('child_removed', snap =>{
 
-      for(let i = 0; i< notes.length; i++){
+      for(var i = 0; i< prevNotes.length; i++){
 
-        if(notes[i].noteId = snapshot.key){
+        if(prevNotes[i].noteId === snap.key){
 
-         notes.splice(i,1);
- }
+          prevNotes.splice(i,1)
+        }
 
       }
-           
+
       this.setState({
-        notes: notes,
+        notes : prevNotes
       })
+
     });
+
+  
 
   }
 
 
   
-updateNote(noteId,note){
+updateNote=(noteId,note)=>{
 
 this.db.child(noteId).update({noteContent: note});  
 
@@ -84,39 +84,39 @@ this.db.child(noteId).update({noteContent: note});
 
 
 
-  removeNote(noteId){
-
-
+  removeNote = (noteId) =>{
 
     this.db.child(noteId).remove();
     
   }
 
-  addNote(note){
+  addNote = (note) =>{
 
     this.db.push().set({noteContent: note})
     
   }
 
 
+  logOut =()=>{
+
+    firebase.auth().signOut()
+    .then(result=> console.log("Se ha cerrado sesion"))
+    .catch(error => console.log(`Error ${error.code}: ${error.message} ` ))
+
+}
+
+
   render(){
 
-    
+
+
     return(
+
       <div className ="notesContainer">
-        
-
-        <div className ="notesHeader">
-        <h2>Don´t forget-App</h2>
-
-        <h4>Your personal app notes</h4>
-        
-        </div>
+    
 
       <div className = "noteStart">
-
-      <img src = "https://i.imgur.com/1FFacta.gif" className = "catImage"/>
-      <NoteStart handleAuth= {this.handleAuth} />               
+     <NoteStart handleAuth= {this.handleAuth} />               
       </div>
 
 
@@ -148,7 +148,9 @@ this.db.child(noteId).update({noteContent: note});
 
         </div>
 
+        <input onClick ={this.logOut} value = "LogOut" type= "button" ></input>
       </div>
+
 
     );
 

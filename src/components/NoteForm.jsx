@@ -7,16 +7,20 @@ class NoteForm extends Component{
     constructor(){
         super();
 
-        this.addNote = this.addNote.bind(this);
+
+
 
     } 
 
-    updateNote(){
+    updateNote = ()=>{
+
         this.props.updateNote(this.textInput.value);
+        this.textInput.value = "";
+        this.textInput.focus();
 
     }
 
-    addNote(){
+    addNote=()=>{
 
       this.props.addNote(this.textInput.value);
       this.textInput.value = '';
@@ -29,6 +33,8 @@ class NoteForm extends Component{
             <div className= "NoteForm">
             <input ref= {input=>{this.textInput = input;}} placeholder="Write a note" type="text"/>
             <input onClick= {this.addNote} type="button" value= "Add Note"/>
+            <input onClick= {this.updateNote} type= "button" value= "Add Edit"/>
+
 
             </div>
 

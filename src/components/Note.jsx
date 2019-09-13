@@ -9,26 +9,14 @@ class Note extends Component{
     constructor(props){
         super(props);
 
-         this.noteId = props.noteId;
+        this.noteId = props.noteId;
         this.noteContent = props.noteContent;
         this.removeNote = props.removeNote;
-
-
+        this.updateNote = props.updateNote;
         
     }
 
-
-componentWillReceiveProps(){
-
-
-
-
-
-
-}
-
-
-    handleRemove(id){
+    handleRemove =(id)=>{
 
        const userResponse = window.confirm('¿Estás seguro de que quieres eliminar la nota?');
 
@@ -43,7 +31,7 @@ componentWillReceiveProps(){
 
 
 
-    render(){
+    render(props){
 
         
         return(
@@ -55,6 +43,7 @@ componentWillReceiveProps(){
                 <br/>
 
             <h2>{this.noteContent}</h2>
+           
              </div>
         )
 
