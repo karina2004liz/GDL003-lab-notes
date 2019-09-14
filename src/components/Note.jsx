@@ -1,8 +1,5 @@
 import React,{Component} from 'react';
 import './Note.css';
-import firebase from 'firebase';
-import {db_config} from '../database/config';
-import 'firebase/database' 
 
 class Note extends Component{
 

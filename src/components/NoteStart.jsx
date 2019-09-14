@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './NoteStart.css';
 import firebase from 'firebase';
-import 'firebase/auth';
+//import 'firebase/auth';
+import fireConfig from '../database/config';
 
 
 
@@ -16,7 +17,7 @@ class NoteStart extends Component{
         let provider = new firebase.auth.GoogleAuthProvider();
         provider.addScope('https://www.googleapis.com/auth/plus.login');
 
-        firebase.auth().signInWithPopup(provider)
+        fireConfig.auth().signInWithPopup(provider)
         
         .then(result=> console.log(`${result.user.email} ha iniciado sesión`))
         .catch(error => console.log(`Error ${error.code}: ${error.message} ` ))
@@ -28,7 +29,7 @@ class NoteStart extends Component{
         let provider = new firebase.auth.FacebookAuthProvider();
         provider.addScope("public_profile");
 
-        firebase.auth().signInWithPopup(provider)
+        fireConfig.auth().signInWithPopup(provider)
         .then(result=> console.log(`${result.user.email} ha iniciado sesión`))
         .catch(error => console.log(`Error ${error.code}: ${error.message} ` ))
 
@@ -39,10 +40,10 @@ class NoteStart extends Component{
         let email = this.textEmail.value;
         let pass = this.textPass.value;
 
-        firebase.auth().signInWithEmailAndPassword(email,pass)
+        fireConfig.auth().signInWithEmailAndPassword(email,pass)
             .then(() => { console.log("login successful") })
             .catch((error) => {
-                firebase.auth().createUserWithEmailAndPassword(email,pass)
+                fireConfig.auth().createUserWithEmailAndPassword(email,pass)
                     .then(() => console.log("register has been successful"))
                     .catch((error) => console.log(error))
             })

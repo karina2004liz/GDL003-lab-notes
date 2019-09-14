@@ -3,14 +3,14 @@ import './App.css';
 //import { throwStatement } from '@babel/types';
 import Note from './components/Note';
 import NoteForm from './components/NoteForm';
-import NoteStart from './components/NoteStart';
+//import NoteStart from './components/NoteStart';
 import firebase from 'firebase';
-import {db_config} from './database/config';
+import fireConfig from './database/config';
 import 'firebase/database' ;
-import 'firebase/auth';
+//import 'firebase/auth';
 //import { FirebaseAuthProvider, FirebaseAuthConsumer } from "@react-firebase/auth";
 
-
+//     <NoteStart handleAuth= {this.handleAuth} />    
 
 
 class App extends Component{
@@ -19,7 +19,7 @@ class App extends Component{
     super();
 
 
-    this.app = firebase.initializeApp(db_config); //conection to firebase
+    this.app = fireConfig; //conection to firebase
     this.db = this.app.database().ref().child('notes'); //colection named notes
 
     this.state ={
@@ -116,7 +116,7 @@ this.db.child(noteId).update({noteContent: note});
     
 
       <div className = "noteStart">
-     <NoteStart handleAuth= {this.handleAuth} />               
+           
       </div>
 
 
