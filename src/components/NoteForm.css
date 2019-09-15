@@ -1,15 +1,19 @@
-.NoteForm input[type="text"]{
+.NoteForm input[type="textarea"]{
 
 padding: 2rem;
+width: 15rem;    
 
 }
 
 .NoteForm input[type="button"]{
 
-padding: 2rem;
+float: right;
 color: white;
 background: #019875;
-border-radius: 1rem;
+border-radius: .5rem;
+height: 3rem;
+width: 6rem;
+text-align: center;
 }
 
 

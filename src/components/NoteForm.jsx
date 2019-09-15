@@ -4,13 +4,10 @@ import './NoteForm.css';
 
 class NoteForm extends Component{
 
-    constructor(){
+    /*constructor(){
         super();
 
-
-
-
-    } 
+    } */
 
     updateNote = ()=>{
 
@@ -31,11 +28,8 @@ class NoteForm extends Component{
     render(){
         return(
             <div className= "NoteForm">
-            <input ref= {input=>{this.textInput = input;}} placeholder="Write a note" type="text"/>
+            <input ref= {input=>{this.textInput = input;}} placeholder="Write a new note" type="textarea"/>
             <input onClick= {this.addNote} type="button" value= "Add Note"/>
-            <input onClick= {this.updateNote} type= "button" value= "Add Edit"/>
-
-
             </div>
 
 

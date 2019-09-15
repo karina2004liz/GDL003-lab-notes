@@ -40,7 +40,7 @@ class Note extends Component{
                 <br/>
 
             <h2>{this.noteContent}</h2>
-           
+            <p>Created: </p>
              </div>
         )
 
