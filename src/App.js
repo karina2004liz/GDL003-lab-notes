@@ -35,8 +35,10 @@ class App extends Component{
   }
 
 
+
   componentWillMount(){
 
+  
     
 
     const prevNotes = this.state.notes;
@@ -48,6 +50,7 @@ class App extends Component{
         noteId: snap.key,
         noteContent: snap.val().noteContent,
         noteUid : snap.val().noteUid,
+        date : snap.val().date,
      })
 
      this.setState({
@@ -98,10 +101,17 @@ this.db.child(noteId).update({noteContent: note});
   }
 
   addNote = (note) =>{
+   var date = new Date();
+   var dia = date.getDate();
+   var mes = date.getMonth()+1;
+   var hora = date.getHours();
+   var min = date.getMinutes();
+
 
     this.db.push().set({
     noteContent: note,
-    noteUid:fireConfig.auth().currentUser.uid
+    noteUid:fireConfig.auth().currentUser.uid,
+    date: dia+"/"+mes+" "+hora+":"+min,
     })
     
   }
@@ -146,6 +156,7 @@ this.db.child(noteId).update({noteContent: note});
               <Note
               noteContent = {note.noteContent}
               noteId = {note.noteId}
+              date = {note.date}
               key = {note.noteId}
               removeNote= {this.removeNote}
               updateNote ={this.updateNote}

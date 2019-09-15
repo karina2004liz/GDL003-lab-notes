@@ -8,6 +8,7 @@ class Note extends Component{
 
         this.noteId = props.noteId;
         this.noteContent = props.noteContent;
+        this.date = props.date;
         this.removeNote = props.removeNote;
         this.updateNote = props.updateNote;
         
@@ -27,6 +28,7 @@ class Note extends Component{
     }
 
 
+// <input id= "edit" type="image" src = "https://www.pinclipart.com/picdir/big/8-89038_big-image-editing-clip-art-png-download.png"/>
 
     render(props){
 
@@ -34,14 +36,14 @@ class Note extends Component{
         return(
 
             <div key= {this.noteId} className="Note">
-                <input id= "edit" type="image" src = "https://www.pinclipart.com/picdir/big/8-89038_big-image-editing-clip-art-png-download.png"/>
+               
                 <input onClick= {()=>this.handleRemove(this.noteId)} type="image" src="https://www.pinclipart.com/picdir/big/240-2407973_tache-logo-of-accord-logo-of-cargill-clipart.png"/>
                 <br/>
                 <br/>
 
-            <h2>{this.noteContent}</h2>
-            <p>Created: </p>
-             </div>
+                <h2>{this.noteContent}</h2>
+                <p>Created:{this.date}</p>
+                </div>
         )
 
     }

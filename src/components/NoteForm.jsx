@@ -30,6 +30,7 @@ class NoteForm extends Component{
             <div className= "NoteForm">
             <input ref= {input=>{this.textInput = input;}} placeholder="Write a new note" type="textarea"/>
             <input onClick= {this.addNote} type="button" value= "Add Note"/>
+            
             </div>
 
 
