@@ -1,21 +1,18 @@
 import React, {Component} from 'react';
 import './NoteForm.css';
+import Note from "./Note";
+
 
 
 class NoteForm extends Component{
 
-    /*constructor(){
+    constructor(){
         super();
 
-    } */
 
-    updateNote = ()=>{
+    } 
 
-        this.props.updateNote(this.textInput.value);
-        this.textInput.value = "";
-        this.textInput.focus();
 
-    }
 
     addNote=()=>{
 
@@ -33,12 +30,7 @@ class NoteForm extends Component{
             
             </div>
 
-
         )
-
-
-
-
     }
 }
 export default NoteForm;

@@ -28,7 +28,7 @@ class NoteStart extends Component{
 
         let provider = new firebase.auth.FacebookAuthProvider();
         provider.addScope("public_profile");
-
+       
         fireConfig.auth().signInWithPopup(provider)
         .then(result=> console.log(`${result.user.email} ha iniciado sesión`))
         .catch(error => console.log(`Error ${error.code}: ${error.message} ` ))

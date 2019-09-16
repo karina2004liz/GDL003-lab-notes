@@ -4,6 +4,7 @@ body {
   background: -webkit-linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
+  
 
   
   color: white;  
@@ -16,6 +17,12 @@ body {
   padding: 0;
   margin: 0;
 
+}
+
+.notesContainer{
+
+  
+  
 }
 
 .notesFooter, .noteStart {

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './NoteAvatar.css';
 import fireConfig from '../database/config';
 
+
 class NoteAvatar extends Component{
 
 
@@ -11,9 +12,13 @@ class NoteAvatar extends Component{
 
  }   
 
+
+
+
 getDataUser=()=>{
 
 var user = fireConfig.auth().currentUser;
+var tocken = user.accessToken;
 
 if(user != null) {
 
@@ -24,6 +29,7 @@ if(user != null) {
 
         this.email = user.email;
         this.photo = "https://media.giphy.com/media/q4wcaEbmboPOE/giphy.gif";
+
     }
 
     }
@@ -41,9 +47,11 @@ if(user != null) {
             <div>
                 
                 <h1>Welcome</h1>
-                <img className= "avatar" src= {this.photo} ></img>
+                <img className= "avatar" src={this.photo} ></img>
                 <h2>{this.name}</h2>
                 <h2>{this.email}</h2>
+
+                
             </div>
 
 

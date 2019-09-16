@@ -14,14 +14,17 @@ import NoteAvatar from './components/NoteAvatar'
 //     <NoteStart handleAuth= {this.handleAuth} />    
 
 
+
+
+
 class App extends Component{
 
   constructor(){
     super();
 
-
-    this.app = fireConfig; //conection to firebase
-    this.db = this.app.database().ref().child('notes'); //colection named notes
+    
+     //conection to firebase
+    this.db = fireConfig.database().ref().child('notes'); //colection named notes
 
     this.state ={
         notes: []
@@ -30,16 +33,11 @@ class App extends Component{
   }
 
 
-  getDate = () =>{
-
-  }
-
-
 
   componentWillMount(){
 
   
-    
+    const useruid = fireConfig.auth().currentUser.uid;
 
     const prevNotes = this.state.notes;
 
@@ -78,18 +76,28 @@ class App extends Component{
 
     });
 
+
+
+    this.db.on('child_changed', snap=>{
+  
+      prevNotes.push({
+        noteContent: snap.val().noteContent,
+        
+     })
+  
+
+      this.setState({
+        notes : prevNotes
+      })
+
+    })
+
   
 
   }
 
 
   
-updateNote=(noteId,note)=>{
-
-this.db.child(noteId).update({noteContent: note});  
-
-
-}
 
 
 
@@ -189,3 +197,5 @@ this.db.child(noteId).update({noteContent: note});
 }
 
 export default App;
+
+
