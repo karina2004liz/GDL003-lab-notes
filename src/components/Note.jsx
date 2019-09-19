@@ -15,6 +15,7 @@ class Note extends Component{
         this.noteContent = props.noteContent;
         this.date = props.date;
         this.removeNote = props.removeNote;
+        this.edited = props.edited;
 
 
             this.state ={
@@ -36,14 +37,7 @@ class Note extends Component{
 
     }
 
-    Update = (id) =>{
 
-       const newContent = prompt("Edit your note");
-
-        this.db.child(id).update({noteContent: newContent});  
-
-
-    }
 
 
     
@@ -60,7 +54,7 @@ class Note extends Component{
         return(
 
             <div key= {this.noteId} className="Note">
-               
+               <input onClick={()=>this.Update(this.noteId)} id= "edit" type="image" src = "https://www.pinclipart.com/picdir/big/8-89038_big-image-editing-clip-art-png-download.png"/>
                 <input onClick= {()=>this.handleRemove(this.noteId)} type="image" src="https://www.pinclipart.com/picdir/big/240-2407973_tache-logo-of-accord-logo-of-cargill-clipart.png"/>
             
                 <br/>
@@ -68,7 +62,8 @@ class Note extends Component{
 
                 <h2>{this.noteContent}</h2>
                 <p>Created:{this.date}</p>
-                <input type = "button" onClick={()=>this.Update(this.noteId)} />
+                <p>Edited:{this.edited}</p>
+               
                 
                 </div>
         )

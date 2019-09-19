@@ -24,6 +24,7 @@ class App extends Component{
 
     
      //conection to firebase
+    
     this.db = fireConfig.database().ref().child('notes'); //colection named notes
 
     this.state ={
@@ -49,6 +50,7 @@ class App extends Component{
         noteContent: snap.val().noteContent,
         noteUid : snap.val().noteUid,
         date : snap.val().date,
+        edited : snap.val().edited,
      })
 
      this.setState({
@@ -78,19 +80,7 @@ class App extends Component{
 
 
 
-    this.db.on('child_changed', snap=>{
-  
-      prevNotes.push({
-        noteContent: snap.val().noteContent,
-        
-     })
-  
 
-      this.setState({
-        notes : prevNotes
-      })
-
-    })
 
   
 
@@ -120,6 +110,7 @@ class App extends Component{
     noteContent: note,
     noteUid:fireConfig.auth().currentUser.uid,
     date: dia+"/"+mes+" "+hora+":"+min,
+    edited: ""
     })
     
   }
@@ -165,6 +156,7 @@ class App extends Component{
               noteContent = {note.noteContent}
               noteId = {note.noteId}
               date = {note.date}
+              edited = {note.edited}
               key = {note.noteId}
               removeNote= {this.removeNote}
               updateNote ={this.updateNote}

@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import Start from './Start'
 //import firebase from 'firebase';
 
+import router from './router'
+
 
 
 ReactDOM.render(<Start/>, document.getElementById('root'));
