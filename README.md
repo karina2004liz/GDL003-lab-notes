@@ -9,6 +9,19 @@ Por eso llega surge la necesidad de crear tecnologías que nos apoyen en guardar
 ### Inicio de la app
 Permite login de usuario con mail, facebook y gmail.
 
-![LoginApp](url "https://i.ibb.co/bPGSFhZ/Captura-de-pantalla-de-2019-09-18-20-15-08.png")
+![LoginApp]("https://i.ibb.co/bPGSFhZ/Captura-de-pantalla-de-2019-09-18-20-15-08.png")
+
+
+### Aplicación
+La App permite Crear, Eliminar y Actualizar las notas, cada nota incluye fecha de creación y fecha de última edición.
+
+Se visualiza en el usuario la foto que tenga almacenada de perfil(sólo facebook y Gmail).
+
+![ContenidoApp]("https://i.ibb.co/8skgS13/Captura-de-pantalla-de-2019-09-18-20-15-42.png")
+
+Interfáz amigable.
+
+## Disfruta Don´t forget-App y no vuelvas a olvidar tus notas! :D
+
 
 

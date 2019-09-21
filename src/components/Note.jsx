@@ -16,6 +16,7 @@ class Note extends Component{
         this.date = props.date;
         this.removeNote = props.removeNote;
         this.edited = props.edited;
+        this.file = props.file;
 
 
             this.state ={
@@ -37,14 +38,21 @@ class Note extends Component{
 
     }
 
+    Update = (id) =>{
 
+       const newContent = prompt("Edit your note");
 
+    var date = new Date();
+    var dia = date.getDate();
+    var mes = date.getMonth()+1;
+    var hora = date.getHours();
+    var min = date.getMinutes();
 
-    
+        this.db.child(id).update({noteContent: newContent,
+        edited: dia+"/"+mes+" "+hora+":"+min, });  
 
+    }
 
-
-// <input id= "edit" type="image" src = "https://www.pinclipart.com/picdir/big/8-89038_big-image-editing-clip-art-png-download.png"/>
 
 
 
@@ -64,7 +72,7 @@ class Note extends Component{
                 <p>Created:{this.date}</p>
                 <p>Edited:{this.edited}</p>
                
-                
+                <p> {this.file} </p>
                 </div>
         )
 

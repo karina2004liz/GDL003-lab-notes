@@ -1,5 +1,5 @@
-/* import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
 import App from './App';
@@ -9,21 +9,19 @@ import Start from './Start';
 
 const Router = () =>{
 
+    return(
+
     <Start>
         <Switch>
-
-            <Route path = "/DontForgetApp" component = {NoteStart} />
-
+            <Route exact path = "/DontForgetApp" component = {NoteStart} />
+            <Route exact path = "/Notes" component = {App} />
         </Switch>
-
-
-    </Start>
-
+     </Start>
+)
 
 }
 
 
 
 
-
-*/
+export default Router

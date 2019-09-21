@@ -4,7 +4,7 @@ import './index.css';
 //import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Start from './Start'
-//import firebase from 'firebase';
+
 
 import router from './router'
 
