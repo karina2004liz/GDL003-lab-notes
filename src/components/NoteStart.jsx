@@ -91,7 +91,7 @@ class NoteStart extends Component {
           <br />
         </form>
 
-        <h2>Login with</h2>
+        <h3>Login with</h3>
         <input onClick={this.handleAuthFace} value="Facebook" type="button" />
         <br />
         <input onClick={this.handleAuth} value="Google" type="button" />

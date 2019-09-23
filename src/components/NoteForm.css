@@ -23,3 +23,122 @@ text-align: center;
 
 }
 
+
+
+@media (max-width: 899px){
+
+
+    .NoteForm input[type="textarea"]{
+
+        padding: 2rem;
+        width: 10rem;    
+        
+        }
+        
+        .NoteForm input[type="button"]{
+        
+        float: right;
+        color: white;
+        background: #019875;
+        border-radius: .5rem;
+        height: 3rem;
+        width: 6rem;
+        text-align: center;
+        }
+        
+        
+        .NoteForm input[type="button"]:hover{
+        
+            background-color: #02bab5;
+        
+        }
+        
+        
+
+
+
+
+}
+
+
+
+
+@media (max-width: 576px){
+
+
+
+    .NoteForm input[type="textarea"]{
+
+        padding: 3rem;
+        width: 20rem;    
+        
+        }
+        
+        .NoteForm input[type="button"]{
+        
+        float: left;
+        color: white;
+        background: #019875;
+        border-radius: .5rem;
+        height: 3rem;
+        width: 26rem;
+        text-align: center;
+        }
+        
+        
+        .NoteForm input[type="button"]:hover{
+        
+            background-color: #02bab5;
+        
+        }
+        
+        
+
+
+
+
+
+}
+
+
+
+
+
+@media (max-width: 512px){
+
+
+
+    .NoteForm input[type="textarea"]{
+
+        padding:.5rem;
+        width: 21rem;
+        height: 3rem;    
+        font-size: 1.2rem;
+
+        }
+        
+        .NoteForm input[type="button"]{
+        
+        float: left;
+        color: white;
+        background: #019875;
+        border-radius: .5rem;
+        height: 3rem;
+        width: 23rem;
+        text-align: center;
+        }
+        
+        
+        .NoteForm input[type="button"]:hover{
+        
+            background-color: #02bab5;
+        
+        }
+        
+        
+
+
+
+
+
+}

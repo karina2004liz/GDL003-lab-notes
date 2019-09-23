@@ -1,3 +1,10 @@
+@media (min-width: 900px) {
+
+
+
+
+
+
 body {
 
   background: #03001e;  /* fallback for old browsers */
@@ -102,3 +109,396 @@ input[type="button"]{
 
   }
 
+
+
+
+
+  
+}
+
+
+
+
+
+
+@media (max-width: 899px){
+
+
+  
+
+body {
+
+  background: #03001e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+
+  
+  color: white;  
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  
+}
+
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+.notesContainer{
+
+  
+  
+}
+
+.notesFooter, .noteStart {
+
+  background-color: rgba(0,0,0,.2);
+  padding: 2%;
+  margin: 0 auto;
+  border-radius:1rem;
+
+}
+
+.notesHeader{
+
+  font-family: 'Poiret One', cursive;
+  font-size: 2rem; 
+  text-align:end;
+  float:right;
+  width:30%;
+  padding: 2%;
+ 
+
+}
+
+.notesBody{
+
+  margin-top: 20px;
+  float: left;
+  width: 50%;
+  padding-top:2%;
+  padding-bottom:2%;
+
+  background: linear-gradient(to right, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 8%, rgba(204,176,134,1) 21%, rgba(193,158,103,1) 35%, rgba(209,175,123,1) 48%, rgba(193,158,103,1) 61%, rgba(217,183,133,1) 76%, rgba(193,158,103,1) 89%, rgba(233,212,179,1) 100%);
+
+  border-radius: 1rem;
+  border-color:white;
+  border: 1rem;
+  border-style: double;
+
+}
+
+.notesFooter{
+  margin-top: 20px;
+  float: right;
+  width: 30%;
+}
+
+.noteStart{
+  margin-top: 30px;
+  width: auto%;
+  text-align:left;
+  padding-left: 5%;
+ 
+}
+
+input[type="button"]{
+
+  color: white;
+  background: #019875;
+  border-radius: .5rem;
+  height: 3rem;
+  width: 6rem;
+ 
+  }
+  
+  
+  input[type="button"]:hover{
+  
+      background-color: #02bab5;
+  
+  }
+
+.logout{
+
+    width:8rem;
+    position:relative;
+ 
+
+  }
+
+
+
+
+
+
+
+}
+
+
+@media (max-width: 576px){
+
+
+
+body {
+
+  background: #03001e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+
+  
+  color: white;  
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  
+}
+
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+.notesFooter{
+
+  background-color: rgba(0,0,0,.2);
+  padding: 5%;
+  border-radius:1rem;
+  float:right;
+  position:absolute;
+  
+}
+
+.noteStart {
+
+  background-color: rgba(0,0,0,.2);
+  padding: 2%;
+  margin: 0 auto;
+  border-radius:1rem;
+  
+
+}
+
+.notesHeader{
+
+  font-family: 'Poiret One', cursive;
+  font-size: 2rem; 
+  text-align:end;
+  float:right;
+  width:30%;
+  padding: 2%;
+ 
+ 
+
+}
+
+.notesBody{
+
+  margin-top: 20%;
+  float: left;
+  width: 85%;
+  padding-top:2%;
+  padding-bottom:2%;
+
+  background: linear-gradient(to right, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 8%, rgba(204,176,134,1) 21%, rgba(193,158,103,1) 35%, rgba(209,175,123,1) 48%, rgba(193,158,103,1) 61%, rgba(217,183,133,1) 76%, rgba(193,158,103,1) 89%, rgba(233,212,179,1) 100%);
+
+  border-radius: 1rem;
+  border-color:white;
+  border: 1rem;
+  border-style: double;
+  float:right;
+  margin-left: 2rem;
+  margin-right: 2rem; 
+
+}
+
+.notesFooter{
+  margin-top: 20px;
+  float: right;
+  width: 30%;
+}
+
+.noteStart{
+  margin-top: 30px;
+  width: auto%;
+  text-align:left;
+  padding-left: 5%;
+ 
+}
+
+input[type="button"]{
+
+  color: white;
+  background: #019875;
+  border-radius: .5rem;
+  height: 3rem;
+  width: 6rem;
+ 
+  }
+  
+  
+  input[type="button"]:hover{
+  
+      background-color: #02bab5;
+  
+  }
+
+.logout{
+
+    width:8rem;
+    position:relative;
+ 
+
+  }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 512px){
+
+
+
+
+
+body {
+
+  background: #03001e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #03001e, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+  
+  color: white;  
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  
+}
+
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+.notesFooter{
+
+  background-color: rgba(0,0,0,.2);
+  padding: 5%;
+  border-radius:1rem;
+  float:right;
+  position:absolute;
+  
+}
+
+.noteStart {
+
+  background-color: rgba(0,0,0,.2);
+  padding: 5%;
+  margin: 0 auto;
+  border-radius:1rem;
+  height: 9rem;
+
+}
+
+.notesHeader{
+
+  font-family: 'Poiret One', cursive;
+  font-size: 1.5rem; 
+  text-align:end;
+  float:right;
+  width:50%;
+  padding: 2%;
+ 
+ 
+
+}
+
+.notesHeader h2{
+
+  font-size:1.8rem
+}
+
+.notesBody{
+
+  margin-top: 10rem;
+  float: left;
+  width: 85%;
+  padding-top:2%;
+  padding-bottom:2%;
+
+  background: linear-gradient(to right, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 8%, rgba(204,176,134,1) 21%, rgba(193,158,103,1) 35%, rgba(209,175,123,1) 48%, rgba(193,158,103,1) 61%, rgba(217,183,133,1) 76%, rgba(193,158,103,1) 89%, rgba(233,212,179,1) 100%);
+
+  border-radius: 1rem;
+  border-color:white;
+  border: 1rem;
+  border-style: double;
+  float:right;
+  margin-left: 1rem;
+  margin-right: 1rem; 
+
+}
+
+.notesFooter{
+  margin-top: 20px;
+  float: right;
+  width: 30%;
+}
+
+.noteStart{
+  margin-top: 30px;
+  width: auto%;
+  text-align:left;
+  padding-left: 5%;
+ 
+}
+
+input[type="button"]{
+
+  color: white;
+  background: #019875;
+  border-radius: .5rem;
+  height: 3rem;
+  width: 6rem;
+ 
+  }
+  
+  
+  input[type="button"]:hover{
+  
+      background-color: #02bab5;
+  
+  }
+
+.logout{
+
+    width:8rem;
+    position:relative;
+ 
+
+  }
+
+
+
+
+
+
+
+}

@@ -2,9 +2,13 @@
   "name": "labnotes",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "firebase": "^6.5.0",
     "firebase-tools": "^7.3.2",
+    "gh": "^2.0.6",
+    "gh-pages": "^2.1.1",
+    "pages": "0.0.16",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",

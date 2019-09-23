@@ -3,3 +3,26 @@
     width: 8rem;
     border-radius: 50%;
 }
+
+
+@media (max-width: 512px){
+
+
+    .avatar{
+
+        width: 5rem;
+        border-radius: 50%;
+        
+    }
+
+    h1{
+
+        font-size: 1.5rem;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    
+}

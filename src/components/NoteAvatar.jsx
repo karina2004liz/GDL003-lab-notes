@@ -35,3 +35,4 @@ class NoteAvatar extends Component {
 }
 
 export default NoteAvatar;
+    
