@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GDL003-lab-notes/static/css/main.e7db18db.chunk.css",
+    "main.js": "/GDL003-lab-notes/static/js/main.4cd6e7b6.chunk.js",
+    "main.js.map": "/GDL003-lab-notes/static/js/main.4cd6e7b6.chunk.js.map",
+    "runtime~main.js": "/GDL003-lab-notes/static/js/runtime~main.1ae9ac07.js",
+    "runtime~main.js.map": "/GDL003-lab-notes/static/js/runtime~main.1ae9ac07.js.map",
+    "static/js/2.b0acfbf9.chunk.js": "/GDL003-lab-notes/static/js/2.b0acfbf9.chunk.js",
+    "static/js/2.b0acfbf9.chunk.js.map": "/GDL003-lab-notes/static/js/2.b0acfbf9.chunk.js.map",
+    "index.html": "/GDL003-lab-notes/index.html",
+    "precache-manifest.fa6d4b3b9a42541dc089a2fdec088f17.js": "/GDL003-lab-notes/precache-manifest.fa6d4b3b9a42541dc089a2fdec088f17.js",
+    "service-worker.js": "/GDL003-lab-notes/service-worker.js",
+    "static/css/main.e7db18db.chunk.css.map": "/GDL003-lab-notes/static/css/main.e7db18db.chunk.css.map"
+  }
+}
