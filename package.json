@@ -2,7 +2,7 @@
   "name": "labnotes",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://karina2004liz.github.io/GDL003-lab-notes/"
+  "homepage" : "https://karina2004liz.github.io/GDL003-lab-notes/",
   
   "dependencies": {
     "firebase": "^6.5.0",

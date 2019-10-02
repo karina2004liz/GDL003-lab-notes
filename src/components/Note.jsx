@@ -56,6 +56,7 @@ class Note extends Component{
 
 
 
+
     render(props){
 
         
