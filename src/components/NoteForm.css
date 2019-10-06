@@ -111,9 +111,10 @@ text-align: center;
     .NoteForm input[type="textarea"]{
 
         padding:.5rem;
-        width: 21rem;
+        width: 19rem;
         height: 3rem;    
         font-size: 1.2rem;
+        border-radius: .7rem;
 
         }
         
@@ -124,7 +125,7 @@ text-align: center;
         background: #019875;
         border-radius: .5rem;
         height: 3rem;
-        width: 23rem;
+        width: 20rem;
         text-align: center;
         }
         
